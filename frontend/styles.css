@@ -71,7 +71,7 @@
     margin-top: 80px;
 }
 
-.content p {
+.content p, .tr-content p, .flu-content p {
     margin: 20px auto;
     font-weight: 100;
     line-height: 25px;
@@ -126,12 +126,6 @@ button:hover {
     margin-top: 80px;
 }
 
-.tr-content p {
-    margin: 20px auto;
-    font-weight: 100;
-    line-height: 25px;
-}
-
 .tr-content button {
     width: 200px;
     height: 100px;
@@ -154,4 +148,50 @@ button:hover {
 
 .tr-content button:hover {
     border: none;
+}
+
+.flu-content button {
+    display: block;
+    width: auto;
+    padding: 8px 15px;
+    text-align: center;
+    margin-top: 10px;
+    margin-left: 25%;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #009688;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.flu-content button span {
+    background: #009688;
+    height: 100%;
+    width: 0;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.3s;
+}
+
+.flu-content button:hover span {
+    width: 100%
+}
+
+.flu-content button:hover {
+    border: none;
+}
+
+.flu-content {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #fff;
 }
