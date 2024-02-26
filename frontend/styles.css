@@ -195,3 +195,27 @@ button:hover {
     text-align: center;
     color: #fff;
 }
+
+.rsv-content {
+    width: 70%;
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    transform: translateY(-50%);
+    text-align: left;
+    color: #fff;
+    background-color: #009688;
+    border-radius: 25px;
+}
+
+.rsv-content h1 {
+    color: yellow;
+    font-size: 25px;
+    margin: 40px 0px 15px 10px;
+}
+
+.rsv-content p {
+    margin: 10px 10px 10px 10px;
+    font-weight: 100;
+    line-height: 25px;
+}
