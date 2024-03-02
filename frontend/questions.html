@@ -16,12 +16,21 @@
                 </ul>
             </div>
             <div class="flu-content">
-                <p>Almost there! which of one of the following is true for your car issue?</p>
-                <div>
-                    <button type="button"><span></span>This will be question one </button>
-                    <button type="button"><span></span>this two</button>
-                    <button type="button"><span></span>3</button>
-            </div>
-        </div>
+                <p>One click away! which of one of the following is true for your car issue?</p>
+                <div id='buttonsContainerQs'></div>
+		<script src="scripts/script.js"></script>
+        <script>
+            var symptom_id = getQueryParam('symptom_id');
+            let buttonNames;
+            getQuestions(symptom_id)
+            .then(data => {
+                buttonNames = data;
+                createQsButtons(buttonNames);
+            })
+            .catch(error => {
+                console.error('Error fetching data:', error);
+            });
+            </script>
+	    </div>
     </body>
 </html>
