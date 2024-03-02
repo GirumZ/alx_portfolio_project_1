@@ -9,24 +9,46 @@ function loadFlup(sensation) {
 	window.location.href = 'followup.html?sensation=' + sensation;
 }
 
-function getData(sensation) {
+// A function to load the question page
+function loadQsp(symptom_id) {
+	// Redirects to the folloup page with specific parameter
+	window.location.href = 'questions.html?symptom_id=' + symptom_id;
+}
 
-    const flist = []	
-    // Replace 'https://api.example.com/data' with the actual API endpoint
+function getFollowups(sensation) {
+
     apiurl = 'http://localhost:5000/api/symptoms/Sensation/' + sensation
     return fetch(apiurl)
-        .then(response => {
-            // Check if the request was successful (status code 2xx)
-            if (!response.ok) {
-                throw new Error(`HTTP error! Status: ${response.status}`);
-            }
-            // Parse the JSON response
-            return response.json();
-        })
-        .catch(error => {
-            // Handle errors
-            console.error('Error fetching data:', error);
-        });
+    .then(response => {
+        // Check if the request was successful (status code 2xx)
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        // Parse the JSON response
+        return response.json();
+    })
+    .catch(error => {
+        // Handle errors
+        console.error('Error fetching data:', error);
+    });
+}
+
+function getQuestions(symptom_id) {
+    
+    apiurl = 'http://localhost:5000/api/questions/' + symptom_id
+    return fetch(apiurl)
+    .then(response => {
+        // Check if the request was successful (status code 2xx)
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        // Parse the JSON response
+        return response.json();
+    })
+    .catch(error => {
+        // Handle errors
+        console.error('Error fetching data:', error);
+    });
 }
 
 // Function to get query parameters from the URL
@@ -35,16 +57,47 @@ function getQueryParam(name) {
 	return urlParams.get(name);
 }
 
-function createButtons(buttonNames) {
-	var container = document.getElementById("buttonsContainer");
+function createFluButtons(buttonNames) {
+	var container = document.getElementById("buttonsContainerFlu");
     
 	for (let i = 0; i < buttonNames.length; i++) {
 		var button = document.createElement("button");
 		button.innerHTML = buttonNames[i].Symptom;
 
 		// event listner to be added here
+        button.addEventListener("click", function () {
+            handleButtonClick(buttonNames[i]);
+        });
 
 		container.appendChild(button);
 	}
 	
+}
+
+function createQsButtons(buttonNames) {
+	var container = document.getElementById("buttonsContainerQs");
+    
+	for (let i = 0; i < buttonNames.length; i++) {
+		var button = document.createElement("button");
+		button.innerHTML = buttonNames[i].Question;
+
+		// event listner to be added here
+        button.addEventListener("click", function () {
+            handleButtonClick(buttonNames[i]);
+        });
+
+		container.appendChild(button);
+	}
+	
+}
+
+function handleButtonClick(symptom) {
+    if (symptom.Followup_available === 'TRUE') {
+        let symptom_id = symptom.Symptom_id;
+        loadQsp(symptom_id)
+    }
+    else {
+        console.log('has no followup')
+        // resolving page will be presented
+    }
 }
