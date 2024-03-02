@@ -17,15 +17,15 @@
             </div>
             <div class="flu-content">
                 <p>Almost there! which of one of the following is true for your car issue?</p>
-                <div id="buttonsContainer"></div>
+                <div id="buttonsContainerFlu"></div>
 		<script src="scripts/script.js"></script>
 		<script>
 			var sensation = getQueryParam('sensation');
             let buttonNames;
-            getFollowup(sensation)
+            getFollowups(sensation)
             .then(data => {
                 buttonNames = data;
-                createButtons(buttonNames);
+                createFluButtons(buttonNames);
             })
             .catch(error => {
                 console.error('Error fetching data:', error);
