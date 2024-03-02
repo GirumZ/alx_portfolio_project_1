@@ -18,6 +18,19 @@
             <div class="flu-content">
                 <p>Almost there! which of one of the following is true for your car issue?</p>
                 <div id="buttonsContainer"></div>
+		<script src="scripts/script.js"></script>
+		<script>
+			var sensation = getQueryParam('sensation');
+            let buttonNames;
+            getData(sensation)
+            .then(data => {
+                buttonNames = data;
+                createButtons(buttonNames);
+            })
+            .catch(error => {
+                console.error('Error fetching data:', error);
+            });
+		</script>
         </div>
     </body>
 </html>
