@@ -17,18 +17,14 @@
             </div>
             <div class="rsv-content">
                 <h1>Posible Problem</h1>
-                <p>Blue smoke in a car is typically caused by burning oil in the combustion chamber. 
-                    This can result from worn piston rings, valve seals, or a malfunctioning 
-                    PCV (Positive Crankcase Ventilation) system. The burning oil produces blue-colored 
-                    exhaust smoke, indicating internal engine issues that may require attention.
-                </p>
+                <p id="problemParagraph"></p>
                 <h1>Posible Solution</h1>
-                <p>The blue smoke issue in a car, indicative of burning oil in the combustion chamber, 
-                    may require a professional assessment and potential repairs. Common causes include worn piston rings, 
-                    faulty valve seals, or a malfunctioning PCV system. To address the problem, consult with a qualified mechanic 
-                    who can diagnose the specific issue and perform the necessary repairs, such as replacing worn components or 
-                    fixing the PCV system. Regular maintenance,including oil changes and addressing any leaks, can 
-                    also help prevent such problems in the future.</p>
-        </div>
+                <p id="solutionParagraph"></p>
+                <script src="scripts/script.js"></script>
+                <script>                
+                    var symptom_id = getQueryParam('symptom_id');
+                    resolving_symptom_id(symptom_id) 
+                </script>
+            </div>
     </body>
 </html>
