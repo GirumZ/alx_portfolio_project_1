@@ -22,8 +22,15 @@
                 <p id="solutionParagraph"></p>
                 <script src="scripts/script.js"></script>
                 <script>                
-                    var symptom_id = getQueryParam('symptom_id');
-                    resolving_symptom_id(symptom_id) 
+                    const symptom_id = getQueryParam('symptom_id');
+                    const question_id = Number(getQueryParam('question_id'));
+                    
+                    if (question_id === 0) {
+                        resolving_symptom_id(symptom_id);
+                    }
+                    else {
+                        resolving_question_id(question_id);
+                    }
                 </script>
             </div>
     </body>
