@@ -15,6 +15,18 @@ function loadQsp(symptom_id) {
 	window.location.href = 'questions.html?symptom_id=' + symptom_id;
 }
 
+// A function to load the resolving page using the symptom_id as a parameter
+function loadRsp_symptom_id(symptom_id) {
+	// Redirects to the folloup page with specific parameter
+	window.location.href = 'resolve.html?symptom_id=' + symptom_id;
+}
+
+// A function to load the resolving page using the question_id as a parameter
+function loadRsp_question_id(question_id) {
+	// Redirects to the folloup page with specific parameter
+	window.location.href = 'resolve.html?question_id=' + question_id;
+}
+
 function getFollowups(sensation) {
 
     apiurl = 'http://localhost:5000/api/symptoms/Sensation/' + sensation
@@ -51,6 +63,42 @@ function getQuestions(symptom_id) {
     });
 }
 
+function getProblem_symptom_id(symptom_id) {
+    apiurl = 'http://localhost:5000/api/problems/Symptom_id/' + symptom_id
+    return fetch(apiurl)
+    .then(response => {
+        // Check if the request was successful (status code 2xx)
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        // Parse the JSON response
+        return response.json();
+    })
+    .catch(error => {
+        // Handle errors
+        console.error('Error fetching data:', error);
+    });
+
+}
+
+function getProblem_question_id(question_id) {
+    apiurl = 'http://localhost:5000/api/problems/' + question_id
+    return fetch(apiurl)
+    .then(response => {
+        // Check if the request was successful (status code 2xx)
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        // Parse the JSON response
+        return response.json();
+    })
+    .catch(error => {
+        // Handle errors
+        console.error('Error fetching data:', error);
+    });
+
+}
+
 // Function to get query parameters from the URL
 function getQueryParam(name) {
 	const urlParams = new URLSearchParams(window.location.search);
@@ -82,13 +130,56 @@ function createQsButtons(buttonNames) {
 		button.innerHTML = buttonNames[i].Question;
 
 		// event listner to be added here
-        button.addEventListener("click", function () {
-            handleButtonClick(buttonNames[i]);
-        });
+        //button.addEventListener("click", function () {
+          //  handleButtonClick(buttonNames[i]);
+        //});
+
+        // loadRsp(buttonName[i].Symptom_id, buttonName[i].Question_id);
 
 		container.appendChild(button);
 	}
 	
+}
+
+function resolving_symptom_id(symptom_id) {
+    
+    var problemP = document.getElementById("problemParagraph");
+    var solutionP = document.getElementById("solutionParagraph");
+
+    var fullData;
+    getProblem_symptom_id(symptom_id)
+    .then(data => {
+        fullData = data;
+        problemP.innerHTML = fullData[0].Problem;
+        solutionP.innerHTML = fullData[0].Solution;
+        console.log(fullData);
+    })
+    .catch(error => {
+        console.error('Error fetching data:', error);
+    });
+
+
+}
+
+
+function resolving_question_id(question_id) {
+    var problemP = document.getElementById("problemParagraph");
+    var solutionP = document.getElementById("solutionParagraph");
+
+    var fullData;
+    getProblem_question_id(question_id)
+    .then(data => {
+        fullData = data;
+        problemP = fullData.Problem;
+        solutionP = fullData.Solution;
+    })
+    .catch(error => {
+        console.error('Error fetching data:', error);
+    });
+
+    problemP.innerHTML = fullData.Problem;
+    solutionP.innerHTML = fulldata.Solution;
+
 }
 
 function handleButtonClick(symptom) {
@@ -98,6 +189,7 @@ function handleButtonClick(symptom) {
     }
     else {
         console.log('has no followup')
-        // resolving page will be presented
+        let symptom_id = symptom.Symptom_id;
+        loadRsp_symptom_id(symptom_id);
     }
 }
