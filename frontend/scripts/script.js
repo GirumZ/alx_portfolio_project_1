@@ -15,18 +15,13 @@ function loadQsp(symptom_id) {
 	window.location.href = 'questions.html?symptom_id=' + symptom_id;
 }
 
-// A function to load the resolving page using the symptom_id as a parameter
-function loadRsp_symptom_id(symptom_id) {
-	// Redirects to the folloup page with specific parameter
-	window.location.href = 'resolve.html?symptom_id=' + symptom_id;
-}
-
 // A function to load the resolving page using the question_id as a parameter
-function loadRsp_question_id(question_id) {
+function loadRsp(symptom_id, question_id) {
 	// Redirects to the folloup page with specific parameter
-	window.location.href = 'resolve.html?question_id=' + question_id;
+    window.location.href = 'resolve.html?symptom_id=' + symptom_id + '&question_id=' + question_id;
 }
 
+// A function to get the followup content of a sensation
 function getFollowups(sensation) {
 
     apiurl = 'http://localhost:5000/api/symptoms/Sensation/' + sensation
@@ -45,6 +40,7 @@ function getFollowups(sensation) {
     });
 }
 
+// A function to get the questions for a specific symptom_id
 function getQuestions(symptom_id) {
     
     apiurl = 'http://localhost:5000/api/questions/' + symptom_id
@@ -63,8 +59,9 @@ function getQuestions(symptom_id) {
     });
 }
 
+// A function to get the problems fot a specific symptom_id
 function getProblem_symptom_id(symptom_id) {
-    apiurl = 'http://localhost:5000/api/problems/Symptom_id/' + symptom_id
+    apiurl = 'http://localhost:5000/api/problems/Symptom_id/' + symptom_id;
     return fetch(apiurl)
     .then(response => {
         // Check if the request was successful (status code 2xx)
@@ -81,8 +78,9 @@ function getProblem_symptom_id(symptom_id) {
 
 }
 
+// A function to get the questions for a specific question_id
 function getProblem_question_id(question_id) {
-    apiurl = 'http://localhost:5000/api/problems/' + question_id
+    apiurl = 'http://localhost:5000/api/problems/' + question_id;
     return fetch(apiurl)
     .then(response => {
         // Check if the request was successful (status code 2xx)
@@ -105,6 +103,7 @@ function getQueryParam(name) {
 	return urlParams.get(name);
 }
 
+// A fuction that creates buttons on the followup page
 function createFluButtons(buttonNames) {
 	var container = document.getElementById("buttonsContainerFlu");
     
@@ -122,25 +121,28 @@ function createFluButtons(buttonNames) {
 	
 }
 
+// A function that creates buttons on the questions page
 function createQsButtons(buttonNames) {
 	var container = document.getElementById("buttonsContainerQs");
     
 	for (let i = 0; i < buttonNames.length; i++) {
 		var button = document.createElement("button");
 		button.innerHTML = buttonNames[i].Question;
+        //console.log(buttonNames[i]);
+		 //event listner to be added here
+        button.addEventListener("click", function () {
+            loadRsp(buttonNames[i].Symptom_id, buttonNames[i].Question_id);
+            console.log(buttonNames[i]);
+        });
 
-		// event listner to be added here
-        //button.addEventListener("click", function () {
-          //  handleButtonClick(buttonNames[i]);
-        //});
-
-        // loadRsp(buttonName[i].Symptom_id, buttonName[i].Question_id);
+        
 
 		container.appendChild(button);
 	}
 	
 }
 
+// A function to find the problem/solution pair assosiated with a symptom_id
 function resolving_symptom_id(symptom_id) {
     
     var problemP = document.getElementById("problemParagraph");
@@ -152,7 +154,6 @@ function resolving_symptom_id(symptom_id) {
         fullData = data;
         problemP.innerHTML = fullData[0].Problem;
         solutionP.innerHTML = fullData[0].Solution;
-        console.log(fullData);
     })
     .catch(error => {
         console.error('Error fetching data:', error);
@@ -161,8 +162,9 @@ function resolving_symptom_id(symptom_id) {
 
 }
 
-
+// A function to find the problem/solution pair assosiated with a question_id
 function resolving_question_id(question_id) {
+    
     var problemP = document.getElementById("problemParagraph");
     var solutionP = document.getElementById("solutionParagraph");
 
@@ -170,26 +172,30 @@ function resolving_question_id(question_id) {
     getProblem_question_id(question_id)
     .then(data => {
         fullData = data;
-        problemP = fullData.Problem;
-        solutionP = fullData.Solution;
+        problemP.innerHTML = fullData[0].Problem;
+        solutionP.innerHTML = fullData[0].Solution;
     })
     .catch(error => {
         console.error('Error fetching data:', error);
     });
 
-    problemP.innerHTML = fullData.Problem;
-    solutionP.innerHTML = fulldata.Solution;
-
 }
 
+// A function that determine what to do when a button is clicked
 function handleButtonClick(symptom) {
     if (symptom.Followup_available === 'TRUE') {
-        let symptom_id = symptom.Symptom_id;
-        loadQsp(symptom_id)
+        var symptom_id = symptom.Symptom_id;
+        loadQsp(symptom_id);
     }
+
     else {
         console.log('has no followup')
-        let symptom_id = symptom.Symptom_id;
-        loadRsp_symptom_id(symptom_id);
+        symptom_id = symptom.Symptom_id;
+        console.log(symptom_id);
+        let question_id = 0;
+        console.log(question_id)
+        loadRsp(symptom_id, question_id);
+        //console.log(symptom_id);
+        //console.log(question_id);
     }
 }
