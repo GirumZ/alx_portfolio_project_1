@@ -1,25 +1,25 @@
 Symptom_id,Symptom,Sensation,Followup_available
-1,smoke,see,TRUE
-2,fluid leak,see,TRUE
-3,warning light,see,TRUE
-4,uneven tire wear,see,TRUE
-5,drift,feel,TRUE
-6,steering excessive play,feel,FALSE
-7,vehicle vibration,feel,TRUE
-8,pulsation on brake pedal,feel,FALSE
-9,steering wheel vibration,feel,FALSE
-10,shuddering during acceleration,feel,FALSE
-11,jerky acceleration,feel,FALSE
-12,harsh gear shift,feel,FALSE
-13,uneven ride,feel,FALSE
-14,exhaust smell inside the vehicle,smell,FALSE
-15,sulfer or rotten egg smell,smell,FALSE
-16,gasoline smell,smell,FALSE
-17,musty or moldy smell,smell,FALSE
-18,sweet or syrupy oder,smell,FALSE
-19,burning rubber smell,smell,FALSE
-20,electrical burn smell,smell,FALSE
-21,overheating smell,smell,FALSE
+1,Smoke,see,TRUE
+2,Fluid leak,see,TRUE
+3,Warning light,see,TRUE
+4,Uneven tire wear,see,TRUE
+5,Drift,feel,TRUE
+6,Steering excessive play,feel,FALSE
+7,Vehicle vibration,feel,TRUE
+8,Pulsation on brake pedal,feel,FALSE
+9,Steering wheel vibration,feel,FALSE
+10,Shuddering during acceleration,feel,FALSE
+11,Jerky acceleration,feel,FALSE
+12,Harsh gear shift,feel,FALSE
+13,Uneven ride,feel,FALSE
+14,Exhaust smell inside the vehicle,smell,FALSE
+15,Sulfur or rotten egg smell,smell,FALSE
+16,Gasoline smell,smell,FALSE
+17,Musty or moldy smell,smell,FALSE
+18,Sweet or syrupy odor,smell,FALSE
+19,Burning rubber smell,smell,FALSE
+20,Electrical burn smell,smell,FALSE
+21,Overheating smell,smell,FALSE
 22,Squeaking or Squealing Sounds,hear,TRUE
 23,Whining or Humming Sounds,hear,TRUE
 24,Knocking or Pinging Sounds,hear,TRUE

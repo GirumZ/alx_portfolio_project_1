@@ -26,31 +26,31 @@ Question_id,Question,Symptom_id
 25,Does the drifting happen when cruising,5
 26,Does the vehicle vibrate at all speed,7
 27,Does the vehicle vibrate at high speed,7
-28,Do you hear the squeaking all the time,23
-29,Do you hear the squeaking when stopping,23
-30,Do you hear the squeaking only when you start the vehicle,23
-31,Do you hear the squeaking only when turning,23
-32,Do you hear the squeaking only when the vehicle is moving,23
-33,Do you hear the whining when accelerating,24
-34,Do you hear the whining when decelerating,24
-35,Do you hear the whining when cruising,24
-36,Do you hear the whining when idling,24
-37,Do you hear the whining when steering,24
-38,Do you hear the whining when you turn on the AC,24
-39,Do you hear the knocking when accelerating,25
-40,Do you hear the knocking when cruising,25
-41,Do you hear the knocking when idling,25
-42,Do you hear the knocking when steering,25
-43,Do you hear the knocking when braking,25
-44,Do you hear the clunking when turning,26
-45,Do you hear the clunking when going over bumps,26
-46,Do you hear the clunking when shifting gear,26
-47,Do you here the whistling at the doors and windows,27
-48,Do you here the whistling under the hood,27
-49,Do you hear the hissing at the tires,28
-50,Do you hear the hissing under the hood,28
-51,Do you hear the rattling sound under the vehicle,29
-52,Do you hear the rattling sound at the exhaust system,29
-53,Do you hear the rattling sound under the hood,29
-54,Do you hear the rattling sound  at the wheels or tires,29
-55,Do you hear the rattling sound at the suspension ,29
+28,Do you hear the squeaking all the time,22
+29,Do you hear the squeaking when stopping,22
+30,Do you hear the squeaking only when you start the vehicle,22
+31,Do you hear the squeaking only when turning,22
+32,Do you hear the squeaking only when the vehicle is moving,22
+33,Do you hear the whining when accelerating,23
+34,Do you hear the whining when decelerating,23
+35,Do you hear the whining when cruising,23
+36,Do you hear the whining when idling,23
+37,Do you hear the whining when steering,23
+38,Do you hear the whining when you turn on the AC,23
+39,Do you hear the knocking when accelerating,24
+40,Do you hear the knocking when cruising,24
+41,Do you hear the knocking when idling,24
+42,Do you hear the knocking when steering,24
+43,Do you hear the knocking when braking,24
+44,Do you hear the clunking when turning,25
+45,Do you hear the clunking when going over bumps,25
+46,Do you hear the clunking when shifting gear,25
+47,Do you here the whistling at the doors and windows,26
+48,Do you here the whistling under the hood,26
+49,Do you hear the hissing at the tires,27
+50,Do you hear the hissing under the hood,27
+51,Do you hear the rattling sound under the vehicle,27
+52,Do you hear the rattling sound at the exhaust system,28
+53,Do you hear the rattling sound under the hood,28
+54,Do you hear the rattling sound  at the wheels or tires,28
+55,Do you hear the rattling sound at the suspension ,28
