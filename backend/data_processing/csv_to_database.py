@@ -31,12 +31,12 @@ def csv_to_mysql(csv_file, host, database, user, password, table_name):
 
 if __name__ == "__main__":
     # Replace placeholders with your actual CSV file, MySQL connection details, and table name
-    csv_file = 'problems.csv'
+    csv_file = 'questions.csv'
     host = 'localhost'
     database = 'e_mechanic'
     user = 'girum'
     password = '2315'
-    table_name = 'problems'
+    table_name = 'questions'
 
     # Call the function to transfer data
     csv_to_mysql(csv_file, host, database, user, password, table_name)

@@ -28,3 +28,10 @@ CREATE TABLE problems (
 	Question_id INT,
 	Symptom_id INT
 );
+
+-- create tips table
+CREATE TABLE tips (
+	Tip_id INT PRIMARY KEY,
+	Tip_short VARCHAR(250),
+	Tip_long VARCHAR(1000)
+);
