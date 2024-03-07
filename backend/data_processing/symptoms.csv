@@ -1,0 +1,29 @@
+Symptom_id,Symptom,Sensation,Followup_available
+1,Smoke,see,TRUE
+2,Fluid leak,see,TRUE
+3,Warning light,see,TRUE
+4,Uneven tire wear,see,TRUE
+5,Drift,feel,TRUE
+6,Steering excessive play,feel,FALSE
+7,Vehicle vibration,feel,TRUE
+8,Pulsation on brake pedal,feel,FALSE
+9,Steering wheel vibration,feel,FALSE
+10,Shuddering during acceleration,feel,FALSE
+11,Jerky acceleration,feel,FALSE
+12,Harsh gear shift,feel,FALSE
+13,Uneven ride,feel,FALSE
+14,Exhaust smell inside the vehicle,smell,FALSE
+15,Sulfur or rotten egg smell,smell,FALSE
+16,Gasoline smell,smell,FALSE
+17,Musty or moldy smell,smell,FALSE
+18,Sweet or syrupy odor,smell,FALSE
+19,Burning rubber smell,smell,FALSE
+20,Electrical burn smell,smell,FALSE
+21,Overheating smell,smell,FALSE
+22,Squeaking or Squealing Sounds,hear,TRUE
+23,Whining or Humming Sounds,hear,TRUE
+24,Knocking or Pinging Sounds,hear,TRUE
+25,Clunking or Banging Sounds,hear,TRUE
+26,Whistling Sounds,hear,TRUE
+27,Hissing sound,hear,TRUE
+28,Rattling sound,hear,TRUE
