@@ -3,29 +3,38 @@
     <head>
         <title>E-Mechanic</title>
         <link rel="stylesheet" href="styles/styles.css">
-	<script src="scripts/script.js"></script>
+	    <script src="scripts/script.js"></script>
     </head>
     <body>
-        <div class="banner">
-            <div class="navbar">
-                <img src="images/logo.png" class="logo">
+        <header>
+            <div class="logo">
+                <img src="images/logo.png" width="200px">
+            </div>
+            <nav>
                 <ul>
                     <li><a href="home.html"><strong>Home</strong></a></li>
                     <li><a href="troubleshoot.html"><strong>Troubleshoot</strong></a></li>
                     <li><a href="#"><strong>About Us</strong></a></li>
                     <li><a href="#"><strong>Help?</strong></a></li>
                 </ul>
+            </nav>
+        </header>
+        <main class="tr-main">
+            <h1>Struggling with a car issue?</h1>
+            <p>Start troubleshooting by choosing which option best discribes the issue</p>
+            <div class="tr-buttons">
+                <button type="button" onclick='loadFlup("see")'><span></span>I CAN SEE IT</button>
+                <button type="button" onclick='loadFlup("hear")'><span></span>I CAN HEAR IT</button>
+                <button type="button" onclick='loadFlup("smell")'><span></span>I CAN SMALL IT</button>
+                <button type="button" onclick='loadFlup("feel")'><span></span>I CAN FEEL IT</button>
             </div>
-            <div class="tr-content">
-                <h1>Struggling with a car issue?</h1>
-                <p>Start troubleshooting by choosing which option best discribes the issue</p>
-                <div>
-                    <button type="button" onclick='loadFlup("see")'><span></span>I CAN SEE IT</button>
-                    <button type="button" onclick='loadFlup("hear")'><span></span>I CAN HEAR IT</button>
-                    <button type="button" onclick='loadFlup("smell")'><span></span>I CAN SMALL IT</button>
-                    <button type="button" onclick='loadFlup("feel")'><span></span>I CAN FEEL IT</button>
-                </div>
+        </main>
+        <footer>
+            <div class="social-icons">
+                <a href="your_social_media_link1" target="_blank"><img src="images/facebook.png"></a>
+                <a href="your_social_media_link2" target="_blank"><img src="images/tweeter.png"></a>
+                <a href="your_social_media_link3" target="_blank"><img src="images/instagram.png"></a>
             </div>
-        </div>
+        </footer>
     </body>
 </html>

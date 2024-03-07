@@ -4,7 +4,7 @@
     font-family: sans-serif;
 }
 
-.banner {
+body {
     width: 100%;
     height: 100vh;
     background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('../images/image1.jpg');
@@ -12,188 +12,50 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    /*color: white;*/
+    display: flex;
+    flex-direction: column;
 }
 
-.navbar {
-    width: 85%;
-    margin: auto;
-    padding: 35px 0;
+header {
     display: flex;
-    align-items: center;
+    flex-direction: row;
     justify-content: space-between;
 }
 
 .logo {
-    width: 200px;
-    cursor: pointer;
+    margin: 20px;
 }
 
-.navbar ul li {
-    list-style: none;
-    display: inline-block;
-    margin: 0 20px;
-    position: relative;
+nav {
+    padding: 50px;
 }
 
-.navbar ul li a {
-    text-decoration: none;
-    color: #fff;
-    text-transform: uppercase;
+nav ul {
+    list-style-type: none; /* Remove default list styles */
+    display: flex; /* Use flexbox for layout */
 }
 
-.navbar ul li::after {
-    content: '';
-    height: 3px;
-    width: 0;
-    background: #009688;
-    position: absolute;
-    left: 0;
-    bottom: -10px;
-    transition: 0.3s;
+nav ul li {
+    margin-right: 30px;
 }
 
-.navbar ul li:hover::after {
-    width: 100%
+nav ul li a {
+    text-decoration: none; /* Remove underlines from links */
+    color: white; /* Set the text color */
+    font-weight: bold; /* Make the text bold */
 }
 
-.content {
+nav ul li:hover {
+    transform: scale(1.2);
+}
+
+.hm-main, .tr-main, .qs-main, .rs-main {
+    flex: 1;
     width: 100%;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    text-align: center;
     color: #fff;
-}
-
-.content h1 {
-    font-size: 70px;
-    margin-top: 80px;
-}
-
-.content p, .tr-content p, .flu-content p {
-    margin: 20px auto;
-    font-weight: 100;
-    line-height: 25px;
-}
-
-button {
-    width: 200px;
-    padding: 15px 0;
-    text-align: center;
-    margin: 20px 10px;
-    border-radius: 25px;
-    font-weight: bold;
-    border: 2px solid #009688;
-    background: transparent;
-    color: #fff;
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
-}
-
-span {
-    background: #009688;
-    height: 100%;
-    width: 0;
-    border-radius: 25px;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    z-index: -1;
-    transition: 0.3s;
-}
-
-button:hover span {
-    width: 100%
-}
-
-button:hover {
-    border: none;
-}
-
-.tr-content {
-    width: 100%;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    text-align: center;
-    color: #fff;
-}
-
-.tr-content h1 {
-    font-size: 45px;
-    margin-top: 80px;
-}
-
-.tr-content button {
-    width: 200px;
-    height: 100px;
-    padding: 15px 0;
-    text-align: center;
-    margin: 20px 10px;
-    border-radius: 25px;
-    font-weight: bold;
-    border: 2px solid #009688;
-    background: transparent;
-    color: #fff;
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
-}
-
-.tr-content button:hover span {
-    width: 100%
-}
-
-.tr-content button:hover {
-    border: none;
-}
-
-.flu-content button {
-    display: block;
-    width: auto;
-    padding: 8px 15px;
-    text-align: center;
-    margin-top: 10px;
-    margin-left: 25%;
-    border-radius: 25px;
-    font-weight: bold;
-    border: 2px solid #009688;
-    background: transparent;
-    color: #fff;
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
-}
-
-.flu-content button span {
-    background: #009688;
-    height: 100%;
-    width: 0;
-    border-radius: 25px;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    z-index: -1;
-    transition: 0.3s;
-}
-
-.flu-content button:hover span {
-    width: 100%
-}
-
-.flu-content button:hover {
-    border: none;
-}
-
-.flu-content {
-    width: 100%;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    text-align: center;
-    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .rsv-content {
@@ -218,4 +80,107 @@ button:hover {
     margin: 10px 10px 10px 10px;
     font-weight: 100;
     line-height: 25px;
+}
+
+
+main h1 {
+    margin-top: 80px;
+    margin-bottom: 20px;
+    font-size: 70px;
+    
+}
+
+.tr-main h1 {
+    font-size: 45px;
+}
+
+main p {
+    margin: 20px auto;
+    font-weight: 100;
+    line-height: 25px;
+}
+
+
+button {
+    text-align: center;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #009688;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.hm-main button, .tr-main button, .qs-main button {
+    width: 200px;
+    padding: 15px 0;
+    margin: 20px 20px;
+
+
+}
+
+#buttonsContainerFlu, #buttonsContainerQs{
+    margin-top: 10px;
+    margin-bottom: 40px;
+    margin-left: 130px;
+    margin-right: 130px;
+}
+
+#buttonsContainerFlu button, #buttonsContainerQs button {
+    display: inline;
+    width: auto;
+    padding: 8px 15px;
+    margin-top: 30px;
+}
+
+button::before {
+    content: '';
+    background: #009688;
+    height: 100%;
+    width: 0;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.3s;
+}
+
+button:hover::before {
+    width: 100%;
+}
+
+button:hover {
+    border: none;
+}
+
+.tr-buttons button {
+    height: 100px;
+}
+
+/*    style fot the footer */
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    color: #333;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.social-icons img {
+    width: 35px;
+    height: 35px;
+}
+
+.social-icons img:hover {
+    transform: scale(1.2);
 }
