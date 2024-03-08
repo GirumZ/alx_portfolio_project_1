@@ -31,8 +31,8 @@ nav {
 }
 
 nav ul {
-    list-style-type: none; /* Remove default list styles */
-    display: flex; /* Use flexbox for layout */
+    list-style-type: none;
+    display: flex;
 }
 
 nav ul li {
@@ -40,16 +40,18 @@ nav ul li {
 }
 
 nav ul li a {
-    text-decoration: none; /* Remove underlines from links */
-    color: white; /* Set the text color */
-    font-weight: bold; /* Make the text bold */
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
 }
 
 nav ul li:hover {
     transform: scale(1.2);
 }
 
-.hm-main, .tr-main, .qs-main, .rs-main {
+/*  style for the main part */
+
+.hm-main, .tr-main, .qs-main, .rs-main, .tp-main {
     flex: 1;
     width: 100%;
     color: #fff;
@@ -58,7 +60,7 @@ nav ul li:hover {
     align-items: center;
 }
 
-.rsv-content {
+.rsv-content, .tp-content {
     width: 70%;
     position: absolute;
     top: 50%;
@@ -70,14 +72,14 @@ nav ul li:hover {
     border-radius: 25px;
 }
 
-.rsv-content h1 {
+.rsv-content h1, .tp-content h1 {
     color: yellow;
     font-size: 25px;
     margin: 40px 0px 15px 10px;
 }
 
-.rsv-content p {
-    margin: 10px 10px 10px 10px;
+.rsv-content p, .tp-content p {
+    margin: 10px 10px 40px 10px;
     font-weight: 100;
     line-height: 25px;
 }

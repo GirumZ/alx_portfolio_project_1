@@ -21,6 +21,17 @@ function loadRsp(symptom_id, question_id) {
     window.location.href = 'resolve.html?symptom_id=' + symptom_id + '&question_id=' + question_id;
 }
 
+// A function to load the tips page using the tip_id as a parameter
+function loadtpp() {
+    // Generate a random integer between 1 and 50 (inclusive)
+    var tip_id = Math.floor(Math.random() * 50) + 1;
+
+    console.log(tip_id);
+
+    // Redirects to the tips page with specific id
+    window.location.href = 'tips.html?tip_id=' + tip_id;
+}
+
 // A function to get the followup content of a sensation
 function getFollowups(sensation) {
 
@@ -81,6 +92,24 @@ function getProblem_symptom_id(symptom_id) {
 // A function to get the questions for a specific question_id
 function getProblem_question_id(question_id) {
     apiurl = 'http://localhost:5000/api/problems/' + question_id;
+    return fetch(apiurl)
+    .then(response => {
+        // Check if the request was successful (status code 2xx)
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        // Parse the JSON response
+        return response.json();
+    })
+    .catch(error => {
+        // Handle errors
+        console.error('Error fetching data:', error);
+    });
+
+}
+
+function getTips_id(tip_id) {
+    apiurl = 'http://localhost:5000/api/tips/' + tip_id;
     return fetch(apiurl)
     .then(response => {
         // Check if the request was successful (status code 2xx)
@@ -179,6 +208,23 @@ function resolving_question_id(question_id) {
         console.error('Error fetching data:', error);
     });
 
+}
+// A function that presents selected tips
+function present_tips(tip_id) {
+    var short_tip = document.getElementById("tip_short");
+    var long_tip = document.getElementById("tip_long");
+
+    var fullData;
+    getTips_id(tip_id)
+    .then(data => {
+        fullData = data;
+        console.log(fullData);
+        short_tip.innerHTML = fullData[0].Tip_short;
+        long_tip.innerHTML = fullData[0].Tip_long;
+    })
+    .catch(error => {
+        console.error('Error fetching data:', error);
+    });
 }
 
 // A function that determine what to do when a button is clicked
