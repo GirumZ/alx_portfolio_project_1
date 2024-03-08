@@ -101,6 +101,20 @@ def get_problems_question_id(Symptom_id):
     problems = execute_query(query, params)
     return jsonify(problems)
 
+# to show all the car tips in the database
+@app.route('/api/tips', methods=['GET'])
+def get_tips():
+    query = 'SELECT * FROM tips'
+    tips = execute_query(query)
+    return jsonify(tips)
+
+# to show a car tip with specific tip_id
+@app.route('/api/tips/<int:Tip_id>', methods=['GET'])
+def get_tips_id(Tip_id):
+    query = 'SELECT * FROM tips WHERE Tip_id = %s'
+    params = (Tip_id,)
+    tips = execute_query(query, params)
+    return jsonify(tips)
 
 if __name__ == '__main__':
     app.run()
