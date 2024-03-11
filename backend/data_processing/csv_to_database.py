@@ -1,3 +1,7 @@
+#!/usr/bin/python3
+""" A python program to migrate data from a csv file to a mysql database"""
+
+
 import csv
 import mysql.connector
 
@@ -31,12 +35,12 @@ def csv_to_mysql(csv_file, host, database, user, password, table_name):
 
 if __name__ == "__main__":
     # Replace placeholders with your actual CSV file, MySQL connection details, and table name
-    csv_file = 'questions.csv'
+    csv_file = 'OBD2.csv'
     host = 'localhost'
     database = 'e_mechanic'
     user = 'girum'
     password = '2315'
-    table_name = 'questions'
+    table_name = 'obd'
 
     # Call the function to transfer data
     csv_to_mysql(csv_file, host, database, user, password, table_name)
