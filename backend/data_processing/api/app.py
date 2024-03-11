@@ -116,6 +116,14 @@ def get_tips_id(Tip_id):
     tips = execute_query(query, params)
     return jsonify(tips)
 
+# to show the description of an obd code taking a specific obd code
+@app.route('/api/obd/<string:Code>', methods=['GET'])
+def get_obd_code(Code):
+    query = 'SELECT * FROM obd WHERE Code = %s'
+    params = (Code,)
+    obd = execute_query(query, params)
+    return jsonify(obd)
+
 if __name__ == '__main__':
     app.run()
 
