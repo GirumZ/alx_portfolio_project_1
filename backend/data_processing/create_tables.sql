@@ -35,3 +35,10 @@ CREATE TABLE tips (
 	Tip_short VARCHAR(250),
 	Tip_long VARCHAR(1000)
 );
+
+-- create obd table
+
+CREATE TABLE obd (
+	Code VARCHAR(5) PRIMARY KEY,
+	Description VARCHAR(250)
+);
