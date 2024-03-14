@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing Page</title>
     <link rel="stylesheet" href="styles/styles2.css">
+    <script src="scripts/script.js"></script>
 </head>
 <body>
 
@@ -14,11 +15,11 @@
     </div>
     <nav>
         <ul>
-            <li><a href="home.html"><strong>Home</strong></a></li>
+            <li><a href="index.html"><strong>Home</strong></a></li>
             <li><a href="troubleshoot.html"><strong>Troubleshoot</strong></a></li>
             <li><a href="#"><strong>Tips</strong></a></li>
             <li><a href="#"><strong>OBD2 Lookup</strong></a></li>
-            <li><a href="#"><strong>About Us</strong></a></li>
+            <li><a href="index.html#about" onclick="scrollToSection('about')"><strong>About Us</strong></a></li>
             <li><a href="#"><strong>Help?</strong></a></li>
         </ul>
     </nav>
@@ -32,12 +33,12 @@
                 <p>Welcome to E-Mechanic – your quick-fix solution for diagnosing and resolving car troubles <br>effortlessly. 
                     Drive confidently with our expert-guided troubleshooting at your fingertips.</p>
                 <form class="search-form">
-                    <input type="text" placeholder="Enter OBD code...">
-                    <button type="submit">Search</button>
+                    <input type="text" id="searchInput" placeholder="Enter OBD code...">
+                    <button type="submit" onclick="handleSearch(event)">Search</button>
                 </form>
                 <div class="buttons">
-                    <button>Troubleshoot</button>
-                    <button>Car Tips</button>
+                    <button type="button" onclick='loadTrp()'>Troubleshoot</button>
+                    <button type="button" onclick='loadtpp()'>Car Tips</button>
                 </div>
             </div>
         </div>
@@ -51,7 +52,7 @@
                 <p>Effortlessly pinpoint and troubleshoot common car problems with our 
                     intuitive troubleshooting tool.</p>
                 <div class="buttons">
-                    <button>Start Troubleshooting</button>
+                    <button type="button" onclick='loadTrp()'>Start Troubleshooting</button>
                 </div>
             </div>
             <div class="right">
@@ -71,7 +72,7 @@
                     thanks to our user-friendly lookup tool that translates codes into actionable 
                     information.</p>
                 <div class="buttons">
-                    <button>Search a code</button>
+                    <button onclick="focusSearchInput()">Search a code</button>
                 </div>
             </div>
         </div>
@@ -84,7 +85,7 @@
                 <p>Discover invaluable insights and advice to optimize your driving experience 
                     and keep your vehicle in top condition with our comprehensive car tips.</p>
                 <div class="buttons">
-                    <button>Get a Tip</button>
+                    <button type="button" onclick='loadtpp()'>Get a Tip</button>
                 </div>
             </div>
             <div class="right">
@@ -92,7 +93,7 @@
             </div>
         </div>
     </section>
-    <section class="about-me-section">
+    <section id="about" class="about-me-section">
         <h2>About Me</h2>
         <div class="about-image">
             <img src="images/me.jpg" alt="About Me Image" width="130px" height="100px">
@@ -101,8 +102,8 @@
             <p>I am passionate about cars and technology. With years of experience in automotive 
                 engineering, I have a deep understanding of vehicle mechanics and diagnostics. 
                 My goal is to share my knowledge and insights to help car enthusiasts and owners 
-                alike navigate the complexities of automotive maintenance and troubleshooting. J
-                oin me on this journey as we explore the fascinating world of automobiles together.</p>
+                alike navigate the complexities of automotive maintenance and troubleshooting. 
+                Join me on this journey as we explore the fascinating world of automobiles together.</p>
 
         </div>
         <div class="social-icons">
