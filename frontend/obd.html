@@ -9,11 +9,16 @@
             <div class="logo">
                 <img src="images/logo.png" width="200px">
             </div>
+            <form class="search-form">
+                <input type="text" id="searchInput" placeholder="Enter OBD code...">
+                <button type="submit" onclick="handleSearch(event)">Search</button>
+            </form>
             <nav>
                 <ul>
-                    <li><a href="home.html"><strong>Home</strong></a></li>
+                    <li><a href="index.html"><strong>Home</strong></a></li>
                     <li><a href="troubleshoot.html"><strong>Troubleshoot</strong></a></li>
-                    <li><a href="#"><strong>About Us</strong></a></li>
+                    <li><a href="#"><strong>Tips</strong></a></li>
+                    <li><a href="index.html#about" onclick="scrollToSection('about')"><strong>About Us</strong></a></li>
                     <li><a href="#"><strong>Help?</strong></a></li>
                 </ul>
             </nav>
@@ -21,7 +26,7 @@
         <main class="obd-main">
             <div class="obd-content">
                 <h1 id="obd-code"></h1>
-                <p id="obd-description"></p>
+                <p id="obd-description">Please enter a correct OBD-2 code</p>
                 <script src="scripts/script.js"></script>
                 <script>                
                     const obd = getQueryParam('obd');

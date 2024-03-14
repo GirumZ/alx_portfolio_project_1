@@ -47,6 +47,11 @@ nav ul li:hover {
     transform: scale(1.2);
 }
 
+nav ul button {
+    margin-right: 20px;
+}
+
+
 /* ------------------------ */
 
 footer {

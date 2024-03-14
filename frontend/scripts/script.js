@@ -33,7 +33,7 @@ function loadtpp() {
 // A function to load the question page
 function loadObdp(code) {
 	// Redirects to the folloup page with specific parameter
-	window.location.href = 'obd.html?code=' + code;
+	window.location.href = 'obd.html?obd=' + code;
 }
 
 // A function to get the followup content of a sensation
@@ -284,5 +284,32 @@ function handleButtonClick(symptom) {
         loadRsp(symptom_id, question_id);
         //console.log(symptom_id);
         //console.log(question_id);
+    }
+}
+// A function to display an id-specific section of a page
+function scrollToSection(sectionId) {
+    var section = document.getElementById(sectionId);
+    if (section) {
+        section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+}
+
+// A function that handles the search functionality
+function handleSearch() {
+    event.preventDefault();
+    // Get the text entered in the search input
+    var searchText = document.getElementById("searchInput").value;
+    
+    // loads the obd page with the given code
+    loadObdp(searchText);
+    
+    document.getElementById("searchInput").value = "";
+}
+
+// A function to focuse the cursor on the search bar
+function focusSearchInput() {
+    var searchInput = document.getElementById("searchInput");
+    if (searchInput) {
+        searchInput.focus();
     }
 }

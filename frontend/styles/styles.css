@@ -49,6 +49,28 @@ nav ul li:hover {
     transform: scale(1.2);
 }
 
+.search-form {
+    margin-top: 20px;
+    text-align: center;
+    padding: 22px;
+}
+
+.search-form input[type="text"] {
+    padding: 8px;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+}
+
+.search-form button {
+    padding: 8px 16px;
+    border: none;
+    background-color: #009688;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 5px;
+}
 /*  style for the main part */
 
 .hm-main, .tr-main, .qs-main, .rs-main, .tp-main, .obd-main{
