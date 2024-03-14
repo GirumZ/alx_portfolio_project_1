@@ -51,7 +51,7 @@ nav ul li:hover {
 
 /*  style for the main part */
 
-.hm-main, .tr-main, .qs-main, .rs-main, .tp-main {
+.hm-main, .tr-main, .qs-main, .rs-main, .tp-main, .obd-main{
     flex: 1;
     width: 100%;
     color: #fff;
@@ -60,7 +60,7 @@ nav ul li:hover {
     align-items: center;
 }
 
-.rsv-content, .tp-content {
+.rsv-content, .tp-content, .obd-content {
     width: 70%;
     position: absolute;
     top: 50%;
@@ -72,13 +72,13 @@ nav ul li:hover {
     border-radius: 25px;
 }
 
-.rsv-content h1, .tp-content h1 {
+.rsv-content h1, .tp-content h1, .obd-content h1 {
     color: yellow;
     font-size: 25px;
     margin: 40px 0px 15px 10px;
 }
 
-.rsv-content p, .tp-content p {
+.rsv-content p, .tp-content p, .obd-content p {
     margin: 10px 10px 40px 10px;
     font-weight: 100;
     line-height: 25px;
@@ -86,7 +86,7 @@ nav ul li:hover {
 
 
 main h1 {
-    margin-top: 80px;
+    margin-top: 0px;
     margin-bottom: 20px;
     font-size: 70px;
     

@@ -26,10 +26,14 @@ function loadtpp() {
     // Generate a random integer between 1 and 50 (inclusive)
     var tip_id = Math.floor(Math.random() * 50) + 1;
 
-    console.log(tip_id);
-
     // Redirects to the tips page with specific id
     window.location.href = 'tips.html?tip_id=' + tip_id;
+}
+
+// A function to load the question page
+function loadObdp(code) {
+	// Redirects to the folloup page with specific parameter
+	window.location.href = 'obd.html?code=' + code;
 }
 
 // A function to get the followup content of a sensation
@@ -110,6 +114,25 @@ function getProblem_question_id(question_id) {
 
 function getTips_id(tip_id) {
     apiurl = 'http://localhost:5000/api/tips/' + tip_id;
+    return fetch(apiurl)
+    .then(response => {
+        // Check if the request was successful (status code 2xx)
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        // Parse the JSON response
+        return response.json();
+    })
+    .catch(error => {
+        // Handle errors
+        console.error('Error fetching data:', error);
+    });
+
+}
+
+function getObd_code(code) {
+
+    apiurl = 'http://localhost:5000/api/obd/' + code;
     return fetch(apiurl)
     .then(response => {
         // Check if the request was successful (status code 2xx)
@@ -221,6 +244,24 @@ function present_tips(tip_id) {
         console.log(fullData);
         short_tip.innerHTML = fullData[0].Tip_short;
         long_tip.innerHTML = fullData[0].Tip_long;
+    })
+    .catch(error => {
+        console.error('Error fetching data:', error);
+    });
+}
+
+// A function that presents selected obd code
+function present_obd(code) {
+    var obd_code = document.getElementById("obd-code");
+    var obd_des = document.getElementById("obd-description");
+
+    var fullData;
+    getObd_code(code)
+    .then(data => {
+        fullData = data;
+        console.log(fullData);
+        obd_code.innerHTML = fullData[0].Code;
+        obd_des.innerHTML = fullData[0].Description;
     })
     .catch(error => {
         console.error('Error fetching data:', error);
