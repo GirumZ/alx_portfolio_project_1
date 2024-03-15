@@ -39,7 +39,7 @@ function loadObdp(code) {
 // A function to get the followup content of a sensation
 function getFollowups(sensation) {
 
-    apiurl = 'http://localhost:5000/api/symptoms/Sensation/' + sensation
+    apiurl = 'http://54.165.149.76/api/symptoms/Sensation/' + sensation
     return fetch(apiurl)
     .then(response => {
         // Check if the request was successful (status code 2xx)
@@ -58,7 +58,7 @@ function getFollowups(sensation) {
 // A function to get the questions for a specific symptom_id
 function getQuestions(symptom_id) {
     
-    apiurl = 'http://localhost:5000/api/questions/' + symptom_id
+    apiurl = 'http://54.165.149.76/api/questions/' + symptom_id
     return fetch(apiurl)
     .then(response => {
         // Check if the request was successful (status code 2xx)
@@ -76,7 +76,7 @@ function getQuestions(symptom_id) {
 
 // A function to get the problems fot a specific symptom_id
 function getProblem_symptom_id(symptom_id) {
-    apiurl = 'http://localhost:5000/api/problems/Symptom_id/' + symptom_id;
+    apiurl = 'http://54.165.149.76/api/problems/Symptom_id/' + symptom_id;
     return fetch(apiurl)
     .then(response => {
         // Check if the request was successful (status code 2xx)
@@ -95,7 +95,7 @@ function getProblem_symptom_id(symptom_id) {
 
 // A function to get the questions for a specific question_id
 function getProblem_question_id(question_id) {
-    apiurl = 'http://localhost:5000/api/problems/' + question_id;
+    apiurl = 'http://54.165.149.76/api/problems/' + question_id;
     return fetch(apiurl)
     .then(response => {
         // Check if the request was successful (status code 2xx)
@@ -113,7 +113,7 @@ function getProblem_question_id(question_id) {
 }
 
 function getTips_id(tip_id) {
-    apiurl = 'http://localhost:5000/api/tips/' + tip_id;
+    apiurl = 'http://54.165.149.76/api/tips/' + tip_id;
     return fetch(apiurl)
     .then(response => {
         // Check if the request was successful (status code 2xx)
@@ -132,7 +132,7 @@ function getTips_id(tip_id) {
 
 function getObd_code(code) {
 
-    apiurl = 'http://localhost:5000/api/obd/' + code;
+    apiurl = 'http://54.165.149.76/api/obd/' + code;
     return fetch(apiurl)
     .then(response => {
         // Check if the request was successful (status code 2xx)
