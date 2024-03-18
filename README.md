@@ -1,3 +1,5 @@
+![image](images/Readme_img.png)
+
 # E-Mechanic
 Welcome to E-mechanic, your go-to web application for troubleshooting issues with your car. Whether you're facing engine troubles, electrical issues, or just need some general maintenance advice, E-mechanic is here to help guide you through the process.
 It is designed to provide users with a simple yet effective way to diagnose and troubleshoot common car problems. With an intuitive interface and comprehensive database, users can easily find solutions to their automotive issues without the need for extensive knowledge or experience.
