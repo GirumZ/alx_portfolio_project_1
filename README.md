@@ -29,7 +29,7 @@ Before proceeding with the installation, ensure you have the following software 
 
 #### Clone the Repository
 
-'git clone https://github.com/GirumZ/alx_portfolio_project_1.git'
+`git clone https://github.com/GirumZ/alx_portfolio_project_1.git`
 
 #### Setup MySQL Database
 
@@ -39,28 +39,30 @@ cd backend/data_processing
 
 - Run MySQL as root user
 
-Mysql -u root -p
+`Mysql -u root -p`
 
 - Run the following commands from the mysql command line for setup and table creation
 
+```
 Source sql_setup.sql;
 Source create_tables.sql;
+```
 
 - Exit mysql and run the following command to transfer the cvs data to the database
 
-python csv_to_databas.py 
+`python csv_to_databas.py` 
 
 #### Run the API on the localhost
 
 - Navigate to the api directory
 
-cd api/
+`cd api/`
 
 - Run the API
 
-flask run
+`flask run`
 or
-python app.py
+`python app.py`
 
 Now the backend the database and the API are ready to be used locally
 
