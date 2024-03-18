@@ -2,6 +2,15 @@
 Welcome to E-mechanic, your go-to web application for troubleshooting issues with your car. Whether you're facing engine troubles, electrical issues, or just need some general maintenance advice, E-mechanic is here to help guide you through the process.
 It is designed to provide users with a simple yet effective way to diagnose and troubleshoot common car problems. With an intuitive interface and comprehensive database, users can easily find solutions to their automotive issues without the need for extensive knowledge or experience.
 
+#### Try the project with this: 
+https://girumz.github.io/alx_portfolio_project_1/
+
+## Authers
+#### Girum Zebene Tesfaye
+- [Github](https://github.com/GirumZ/alx_portfolio_project_1)
+- [LinkedIn](https://www.linkedin.com/in/girum-tesfaye-666a6a270/)
+- [X](https://twitter.com/GirumZebene)
+
 ## Tools Used
 
 E-mechanic is built using a combination of frontend and backend technologies to ensure a seamless user experience. The following tools were utilized in the development of this project:
