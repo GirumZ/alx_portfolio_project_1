@@ -27,9 +27,9 @@ Before proceeding with the installation, ensure you have the following software 
 - MySQL Server
 - Git
 
-####Clone the Repository
+#### Clone the Repository
 
-git clone https://github.com/GirumZ/alx_portfolio_project_1.git
+'git clone https://github.com/GirumZ/alx_portfolio_project_1.git'
 
 #### Setup MySQL Database
 
