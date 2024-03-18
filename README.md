@@ -6,10 +6,7 @@ It is designed to provide users with a simple yet effective way to diagnose and 
 https://girumz.github.io/alx_portfolio_project_1/
 
 ## Authers
-#### Girum Zebene Tesfaye
-- [Github](https://github.com/GirumZ/alx_portfolio_project_1)
-- [LinkedIn](https://www.linkedin.com/in/girum-tesfaye-666a6a270/)
-- [X](https://twitter.com/GirumZebene)
+#### Girum Zebene Tesfaye ([Github](https://github.com/GirumZ/alx_portfolio_project_1), [LinkedIn](https://www.linkedin.com/in/girum-tesfaye-666a6a270/), [X](https://twitter.com/GirumZebene))
 
 ## Tools Used
 
