@@ -8,7 +8,7 @@ It is designed to provide users with a simple yet effective way to diagnose and 
 https://girumz.github.io/alx_portfolio_project_1/
 
 ## Authers
-#### Girum Zebene Tesfaye ([Github](https://github.com/GirumZ/alx_portfolio_project_1), [LinkedIn](https://www.linkedin.com/in/girum-tesfaye-666a6a270/), [X](https://twitter.com/GirumZebene))
+#### Girum Zebene Tesfaye ([Github](https://github.com/GirumZ/alx_portfolio_project_1), [LinkedIn](https://www.linkedin.com/in/girum-tesfaye-666a6a270/), [X](https://twitter.com/GirumZebene), [Medium blog post](https://medium.com/@girum.zebe/how-my-first-web-app-project-come-to-life-the-genesis-of-e-mechanics-aa04b8e21562))
 
 ## Tools Used
 
@@ -22,6 +22,9 @@ E-mechanic is built using a combination of frontend and backend technologies to 
 
 These technologies work together harmoniously to deliver a robust and user-friendly experience for both novice and experienced car owners alike.
 
+## Architecture 
+
+![architecture](images/arch_img.png)
 
 ## Installation
 
