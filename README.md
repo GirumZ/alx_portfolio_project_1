@@ -16,3 +16,55 @@ These technologies work together harmoniously to deliver a robust and user-frien
 
 
 ## Installation
+
+To get E-mechanic up and running on your local machine, follow these steps:
+
+#### Prerequisites
+
+Before proceeding with the installation, ensure you have the following software installed:
+
+- Python
+- MySQL Server
+- Git
+
+####Clone the Repository
+
+git clone https://github.com/GirumZ/alx_portfolio_project_1.git
+
+#### Setup MySQL Database
+
+- Navigate to the backend/data_processing directory 
+
+cd backend/data_processing
+
+- Run MySQL as root user
+
+Mysql -u root -p
+
+- Run the following commands from the mysql command line for setup and table creation
+
+Source sql_setup.sql;
+Source create_tables.sql;
+
+- Exit mysql and run the following command to transfer the cvs data to the database
+
+python csv_to_databas.py 
+
+#### Run the API on the localhost
+
+- Navigate to the api directory
+
+cd api/
+
+- Run the API
+
+flask run
+or
+python app.py
+
+Now the backend the database and the API are ready to be used locally
+
+#### Open the index.html file
+
+By navigating to the frontend directory, you can start using the web app through index.html
+
